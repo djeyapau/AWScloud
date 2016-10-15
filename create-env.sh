@@ -7,31 +7,34 @@ do
 count=$(($count+1))
 done
 
-if [ "$count" -ne 5 ]; then
-
 if [ "$count" -lt 5 ]; then
 echo "\nLess than that of expectecd parameters\n"
 
 if [ "$1" == "" ]; then
 echo "Please specify Image ID as the first positional parameter\n"
-elif[ "$2" == "" ]; then
+
+elif [ "$2" == "" ]; then
 echo "Please specify key-name as the second positional parameter\n"
-elif[ "$3" == "" ]; then
+
+elif [ "$3" == "" ]; then
 echo "Please specify security-group as the third positional parameter\n"
-elif[ "$4" == "" ]; then
+
+elif [ "$4" == "" ]; then
 echo "Please specify launch-configuration as the fourth positional parameter\n"
-elif[ "$5" == "" ]; then
+
+elif [ "$5" == "" ]; then
 echo "Please specify count as the fifth positional parameter\n"
 fi
+
+exit
 fi
 
 if [ "$count" -gt 5 ]; then
 echo "\nMore than that of expectecd parameters\n"
+exit
 fi
 
-exit
-
-else
+if [ "$count" -eq 5 ]; then
 
 echo "\nAll positional parameters aboard! Lets start!\n"
 
