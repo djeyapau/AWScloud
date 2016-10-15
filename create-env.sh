@@ -27,6 +27,7 @@ if [ "$count" <=5 ]; then
 echo "\nLess than that of expectecd parameters\n"
 else
 echo "\nMore than that of expectecd parameters\n"
+fi
 sleep 2
 exit
 else
