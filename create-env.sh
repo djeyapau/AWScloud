@@ -41,7 +41,8 @@ echo "\nMore than that of expectecd parameters\n"
 fi
 sleep 2
 exit
-else
+fi
+if [ "$count" -eq 5 ]; then
 echo "\nAll positional parameters aboard! Lets start!\n"
 
 echo "\nWelcome to Dharshini's first load balancer\n"
