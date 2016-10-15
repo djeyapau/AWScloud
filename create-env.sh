@@ -20,12 +20,13 @@ if [ "$5" != "" ]; then
 count5=1
 fi
 
-count=`$count1+$count2+$count3+$count4+$count5`
+count=`"$count1"+"$count2"+"$count3"+"$count4"+"$count5"`
 
-if [ "$count" != 5 ]; then
-if [ "$count" <=5 ]; then
+if [ "$count" -ne 5 ]; then
+if [ "$count" -lt 5 ]; then
 echo "\nLess than that of expectecd parameters\n"
-else
+fi
+if [ "$count" -gt 5 ]; then
 echo "\nMore than that of expectecd parameters\n"
 fi
 sleep 2
