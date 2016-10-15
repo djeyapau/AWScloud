@@ -11,19 +11,19 @@ if [ "$count" -lt 5 ]; then
 echo "\nLess than that of expectecd parameters\n"
 
 if [ -z "$1" ]; then
-echo "Please specify Image ID as the first positional parameter\n"
-
-elif [ -z "$2" ]; then
-echo "Please specify key-name as the second positional parameter\n"
-
-elif [ -z "$3" ]; then
-echo "Please specify security-group as the third positional parameter\n"
-
-elif [ -z "$4" ]; then
-echo "Please specify launch-configuration as the fourth positional parameter\n"
-
-elif [ -z "$5" ]; then
-echo "Please specify count as the fifth positional parameter\n"
+echo "Please specify Image ID as the first positional parameter"
+fi
+if [ -z "$2" ]; then
+echo "Please specify key-name as the second positional parameter"
+fi
+if [ -z "$3" ]; then
+echo "Please specify security-group as the third positional parameter"
+fi
+if [ -z "$4" ]; then
+echo "Please specify launch-configuration as the fourth positional parameter"
+fi
+if [ -z "$5" ]; then
+echo "Please specify count as the fifth positional parameter"
 fi
 
 exit
