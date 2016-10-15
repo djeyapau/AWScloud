@@ -1,5 +1,34 @@
 #!/bin/bash
 
+count=0
+
+if [ "$1" != "" ]; then
+count=`$count+1`
+fi
+
+if [ "$2" != "" ]; then
+count=`$count+1`
+fi
+
+if [ "$3" != "" ]; then
+count=`$count+1`
+fi
+
+if [ "$4" != "" ]; then
+count=`$count+1`
+fi
+
+if [ "$5" != "" ]; then
+count=`$count+1`
+fi
+
+if [ "$count" != 5 ]; then
+echo "\nNot the right positional parameters! I'm done!\n"
+sleep 5
+exit
+else
+echo "\nAll positional parameters aboard! Lets start!\n"
+
 echo "\nWelcome to Dharshini's first load balancer\n"
 
 #input client token
@@ -38,3 +67,5 @@ aws autoscaling attach-load-balancers --load-balancer-names djlb --auto-scaling-
 aws autoscaling update-auto-scaling-group --auto-scaling-group-name djasg --launch-configuration-name $4 --min-size 2
 
 echo "The script completed"
+
+fi
