@@ -2,25 +2,35 @@
 
 if [ "$1" != "" ]; then
 count1=1
+else
+count1=0
 fi
 
 if [ "$2" != "" ]; then
 count2=1
+else
+count2=0
 fi
 
 if [ "$3" != "" ]; then
 count3=1
+else
+count3=0
 fi
 
 if [ "$4" != "" ]; then
 count4=1
+else
+count4=0
 fi
 
 if [ "$5" != "" ]; then
 count5=1
+else
+count5=0
 fi
 
-count=`"$count1"+"$count2"+"$count3"+"$count4"+"$count5"`
+count=$(($count1+$count2+$count3+$count4+$count5))
 
 if [ "$count" -ne 5 ]; then
 if [ "$count" -lt 5 ]; then
