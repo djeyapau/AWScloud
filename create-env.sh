@@ -1,6 +1,6 @@
 #!/bin/bash
 
-coun=0
+count=0
 
 for var in "$@"
 do
@@ -10,19 +10,19 @@ done
 if [ "$count" -lt 5 ]; then
 echo "\nLess than that of expectecd parameters\n"
 
-if [ "$1" == "" ]; then
+if [ -z "$1" ]; then
 echo "Please specify Image ID as the first positional parameter\n"
 
-elif [ "$2" == "" ]; then
+elif [ -z "$2" ]; then
 echo "Please specify key-name as the second positional parameter\n"
 
-elif [ "$3" == "" ]; then
+elif [ -z "$3" ]; then
 echo "Please specify security-group as the third positional parameter\n"
 
-elif [ "$4" == "" ]; then
+elif [ -z "$4" ]; then
 echo "Please specify launch-configuration as the fourth positional parameter\n"
 
-elif [ "$5" == "" ]; then
+elif [ -z "$5" ]; then
 echo "Please specify count as the fifth positional parameter\n"
 fi
 
