@@ -1,45 +1,30 @@
 #!/bin/bash
 
-if [ "$1" != "" ]; then
-count1=1
-else
-count1=0
-fi
+coun=0
 
-if [ "$2" != "" ]; then
-count2=1
-else
-count2=0
-fi
-
-if [ "$3" != "" ]; then
-count3=1
-else
-count3=0
-fi
-
-if [ "$4" != "" ]; then
-count4=1
-else
-count4=0
-fi
-
-if [ "$5" != "" ]; then
-count5=1
-else
-count5=0
-fi
-
-count=$(($count1+$count2+$count3+$count4+$count5))
+for var in "$@"
+do
+count=$(($count+1))
+done
 
 if [ "$count" -ne 5 ]; then
 if [ "$count" -lt 5 ]; then
 echo "\nLess than that of expectecd parameters\n"
+
+if [ "$1" == "" ]; then
+echo "Please specify Image ID as the first positional parameter\n"
+elif[ "$2" == "" ]; then
+echo "Please specify key-name as the second positional parameter\n"
+elif[ "$3" == "" ]; then
+echo "Please specify security-group as the third positional parameter\n"
+elif[ "$4" == "" ]; then
+echo "Please specify launch-configuration as the fourth positional parameter\n"
+elif[ "$5" == "" ]; then
+echo "Please specify count as the fifth positional parameter\n"
 fi
 if [ "$count" -gt 5 ]; then
 echo "\nMore than that of expectecd parameters\n"
 fi
-sleep 2
 exit
 fi
 if [ "$count" -eq 5 ]; then
