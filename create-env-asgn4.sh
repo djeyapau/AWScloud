@@ -1,4 +1,3 @@
-#!/bin/bash
 
 echo "\nWelcome to Dharshini's first load balancer\n"
 
