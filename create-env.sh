@@ -8,6 +8,7 @@ count=$(($count+1))
 done
 
 if [ "$count" -ne 5 ]; then
+
 if [ "$count" -lt 5 ]; then
 echo "\nLess than that of expectecd parameters\n"
 
@@ -22,12 +23,16 @@ echo "Please specify launch-configuration as the fourth positional parameter\n"
 elif[ "$5" == "" ]; then
 echo "Please specify count as the fifth positional parameter\n"
 fi
+fi
+
 if [ "$count" -gt 5 ]; then
 echo "\nMore than that of expectecd parameters\n"
 fi
+
 exit
-fi
-if [ "$count" -eq 5 ]; then
+
+else
+
 echo "\nAll positional parameters aboard! Lets start!\n"
 
 echo "\nWelcome to Dharshini's first load balancer\n"
