@@ -1,30 +1,33 @@
 #!/bin/bash
 
-count=0
-
 if [ "$1" != "" ]; then
-count=`$count+1`
+count1=1
 fi
 
 if [ "$2" != "" ]; then
-count=`$count+1`
+count2=1
 fi
 
 if [ "$3" != "" ]; then
-count=`$count+1`
+count3=1
 fi
 
 if [ "$4" != "" ]; then
-count=`$count+1`
+count4=1
 fi
 
 if [ "$5" != "" ]; then
-count=`$count+1`
+count5=1
 fi
 
+count=`$count1+$count2+$count3+$count4+$count5`
+
 if [ "$count" != 5 ]; then
-echo "\nNot the right positional parameters! I'm done!\n"
-sleep 5
+if [ "$count" <=5 ]; then
+echo "\nLess than that of expectecd parameters\n"
+else
+echo "\nMore than that of expectecd parameters\n"
+sleep 2
 exit
 else
 echo "\nAll positional parameters aboard! Lets start!\n"
